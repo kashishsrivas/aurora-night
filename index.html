@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Aurora Night</title>
+
+  <!-- Google Fonts: Cormorant Garamond & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Three.js Import Map (v0.160.0) -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+    <!-- Cinematic Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+      <p>Entering the night...</p>
+    </div>
+  
+    <!-- Full-screen 3D Canvas -->
+    <canvas id="webgl-canvas" aria-label="3D nighttime landscape beneath the Northern Lights"></canvas>
+  
+    <!-- Fixed Minimalist Interface Overlay -->
+    <div class="ui-overlay">
+      <header class="site-header">
+        <h1 class="site-title">Aurora Night</h1>
+      </header>
+  
+      <footer class="site-footer">
+        <button id="motion-toggle" class="ui-button" type="button" aria-pressed="false" aria-label="Toggle motion">
+          Reduce Motion
+        </button>
+        <button id="sound-toggle" class="ui-button" type="button" aria-pressed="false" aria-label="Toggle ambient sound">
+          Sound Off
+        </button>
+      </footer>
+    </div>
+  
+    <!-- Main Script -->
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
